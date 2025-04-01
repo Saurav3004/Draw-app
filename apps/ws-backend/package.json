@@ -7,12 +7,16 @@
     "build": "tsc -b",
     "start": "node ./dist/index.js"
   },
-  "dependencies": {
+  "devDependencies":{
     "@repo/typescript-config": "workspace:*",
+    "@repo/backend-common": "workspace:*"
+  },
+  "dependencies": {
     "@types/jsonwebtoken": "^9.0.9",
     "@types/ws": "^8.18.0",
     "jsonwebtoken": "^9.0.2",
     "ws": "^8.18.1"
+    
   },
   "keywords": [],
   "author": "",

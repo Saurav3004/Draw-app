@@ -1,6 +1,6 @@
 import { WebSocketServer } from "ws";
 import jwt from 'jsonwebtoken'
-import { JWT_SECRET_KEY } from "./config";
+import { JWT_SECRET_KEY } from "@repo/backend-common/config";
 
 
 const wss = new WebSocketServer({port:8080});
@@ -16,7 +16,12 @@ wss.on("connection",(ws,request) => {
 
     const decoded = jwt.verify(token,JWT_SECRET_KEY)
 
-    if(!decoded){
+    if(typeof decoded == "string"){
+        ws.close()
+        return;
+    }
+
+    if(!decoded || !decoded.userId){
         ws.close();
         return;
     }
