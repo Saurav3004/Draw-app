@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc -b && node ./dist/index.js",
+    "dev": "npm run build && npm run start",
     "build": "tsc -b",
     "start": "node ./dist/index.js"
   },
@@ -16,8 +16,8 @@
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
-      
+    "jsonwebtoken": "^9.0.2",
+    "@repo/db": "workspace:*"
   },
   "keywords": [],
   "author": "",
