@@ -7,17 +7,18 @@
     "build": "tsc -b",
     "start": "node ./dist/index.js"
   },
-  "devDependencies":{
-    "@repo/typescript-config": "workspace:*",
+  "devDependencies": {
     "@repo/backend-common": "workspace:*",
-    "@repo/common": "workspace:*"
+    "@repo/common": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
   },
   "dependencies": {
+    "@repo/db": "workspace:*",
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
+    "bcryptjs": "^3.0.2",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "@repo/db": "workspace:*"
+    "jsonwebtoken": "^9.0.2"
   },
   "keywords": [],
   "author": "",
